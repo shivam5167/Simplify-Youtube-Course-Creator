@@ -5,7 +5,6 @@ import { useCallback, useState } from "react";
 import { parseAsBoolean, useQueryState } from "nuqs";
 
 import GithubIcon from "@/assets/icons/github.icon";
-import GoogleIcon from "@/assets/icons/google.icon";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -59,15 +58,6 @@ const SignInDialog = ({ showTrigger }: SignInDialogProps) => {
             </DialogDescription>
           </DialogHeader>
         </div>
-
-        <Button
-          onClick={() => handleLogin("google")}
-          variant="outline"
-          disabled={isLoading}
-        >
-          <GoogleIcon />
-          {isLoading ? "Signing in..." : "Login with Google"}
-        </Button>
         <Button
           variant="outline"
           onClick={() => handleLogin("github")}
